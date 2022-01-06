@@ -1,0 +1,2 @@
+# muzlu-sozluk
+ revize işlemleri
