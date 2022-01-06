@@ -1,2 +1,2 @@
 # muzlu-sozluk
- revize işlemleri
+asp.net mvc ile ekşisözlük klonu
