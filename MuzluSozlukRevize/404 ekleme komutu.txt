@@ -1,0 +1,5 @@
+web config'de <system.web> altına
+
+  <customErrors mode="On">
+		  <error statusCode="404" redirect="/ErrorPage/Page404"/>
+	  </customErrors>

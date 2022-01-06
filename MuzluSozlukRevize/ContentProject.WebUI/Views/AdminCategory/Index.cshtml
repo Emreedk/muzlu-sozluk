@@ -1,0 +1,56 @@
+﻿@using ContentProject.Entity.Concrete
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<table class="table table-bordered" style="margin-top:auto">
+    <tr>
+        <th>#</th>
+        <th>Kategori</th>
+        <th>Açıklama</th>
+        <th>Durum</th>
+
+
+    </tr>
+    @foreach (var category in Model)
+    {
+        <tr>
+            <th>@category.CategoryId</th>
+            <td>@category.CategoryName</td>
+            <td>@category.CategoryDescription</td>
+            <td>@category.CategoryStatus</td>
+            <td class="project-actions text-right">
+                <a class="btn btn-primary btn-sm" href="/Heading/HeadingByCategory/@category.CategoryId">
+                    <i class="fas fa-folder">
+                    </i>
+                    Başlıklar
+                </a>
+                <a class="btn btn-info btn-sm" href="/AdminCategory/UpdateCategory/@category.CategoryId">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+                <a class="btn btn-danger btn-sm" href="/AdminCategory/DeleteCategory/@category.CategoryId">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+            </td>
+
+        </tr>
+    }
+</table>
+<br />
+<a href="/AdminCategory/AddCategory" class="btn btn-success"> Kategori Ekle </a>
+@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index","AdminCategory", new { p }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    { "page-link"}
+})
+
+

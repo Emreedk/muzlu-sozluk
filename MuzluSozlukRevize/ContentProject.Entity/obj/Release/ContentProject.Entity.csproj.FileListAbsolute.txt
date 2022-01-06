@@ -1,0 +1,16 @@
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\ContentProject.Entity.dll.config
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\ContentProject.Entity.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\ContentProject.Entity.pdb
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\EntityFramework.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\FakeData.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\FluentValidation.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\EntityFramework.xml
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\FakeData.pdb
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\bin\Release\FluentValidation.xml
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\obj\Release\ContentProject.Entity.csproj.AssemblyReference.cache
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\obj\Release\ContentProject.Entity.csproj.CoreCompileInputs.cache
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\obj\Release\ContentProject.Entity.csproj.CopyComplete
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\obj\Release\ContentProject.Entity.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Entity\obj\Release\ContentProject.Entity.pdb

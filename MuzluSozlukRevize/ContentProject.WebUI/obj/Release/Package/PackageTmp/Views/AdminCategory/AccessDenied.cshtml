@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Yetkisiz Erişim</title>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+<!-- IonIcons -->
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+<!-- Google Font: Source Sans Pro -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+
+<div class="row">
+    <div class="col-md-12 col-md-offset-6">
+        <h1><span class="glyphicon glyphicon-remove-circle"></span> Yetkisiz Erişim</h1>
+        <p>
+            Bu sayfaya erişim yetkiniz bulunmamaktadır.
+            <br /><br />
+            @Bootstrap.LinkButton("/Login/WriterLogin", "primary", "", "", "user", " Yazar Giriş Ekranına Gitmek İster misin ?")
+            @Bootstrap.LinkButton("/Login/Index", "warning", "", "", "manager", " Admin Giriş Ekranına Gitmek İster misin ?")
+        </p>
+    </div>
+</div>

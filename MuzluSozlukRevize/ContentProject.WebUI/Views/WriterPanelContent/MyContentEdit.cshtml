@@ -1,0 +1,39 @@
+﻿@model ContentProject.Entity.Concrete.Content
+
+@{
+    ViewBag.Title = "MyContentEdit";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>İçerik Düzenle</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.ContentValue, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.ContentValue,4,60, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ContentValue, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @Html.HiddenFor(x => x.HeadingId)
+        @Html.HiddenFor(x => x.isActive)
+        @Html.HiddenFor(x => x.WriterId)
+        @Html.HiddenFor(x => x.ContentId)
+        @Html.HiddenFor(x => x.ContentDate)
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Değişiklikleri Kaydet" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+

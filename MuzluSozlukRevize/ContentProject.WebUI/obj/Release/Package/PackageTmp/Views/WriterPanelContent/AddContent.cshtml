@@ -1,0 +1,42 @@
+﻿@model ContentProject.Entity.Concrete.Content
+
+@{
+    ViewBag.Title = "AddContent";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("AddContent", "WriterPanelContent", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>İçerik Girişi</h4>
+        <hr />
+        
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group col-md-10">
+        <input type="hidden" name="HeadingId" value="@ViewBag.d" />
+        <br />
+        @Html.Label("İçeriğinizi Yazın")
+
+        <div>
+            @Html.TextAreaFor(model => model.ContentValue, 4, 60, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+        @Html.ValidationMessageFor(x => x.ContentValue, "", new { @class = "text-danger" })
+    </div>
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kaydet" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+

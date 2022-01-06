@@ -1,0 +1,166 @@
+﻿@model ContentProject.Entity.Concrete.Writer
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/AdminLTE-3.0.4/Login_v4/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/Login_v4/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    @using (Html.BeginForm())
+        {
+        @Html.ValidationSummary(true)
+        <div class="limiter">
+            <div class="container-login100" style="background-image: url(/AdminLTE-3.0.4/Login_v4/images/bg-01.jpg);">
+                <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                    <form class="login100-form validate-form">
+                        <span class="login100-form-title p-b-49">
+                            Kayıt Ol
+                        </span>
+                        @Html.HiddenFor(model => model.isActive)
+                        @Html.HiddenFor(model => model.isAdmin)
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="Kullanıcı Adı Girişi Yapınız">
+                            <span class="label-input100">Kullanıcı Adı</span>
+                            <input class="input100" type="text" name="WriterUsername" placeholder="Kullanıcı Adını Giriniz">
+                            @Html.ValidationMessageFor(x => x.WriterUsername, "", new { @class = "text-danger" })
+                            @Html.ValidationMessage("AlreadyUsername", "", new { @class = "text-danger" })
+                            <span class="focus-input100" data-symbol="&#xf206;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="İsim Alanını Boş Geçemezsiniz">
+                            <span class="label-input100">Ad</span>
+                            <input class="input100" type="text" name="WriterName" placeholder="Adınızı Giriniz">
+                            @Html.ValidationMessageFor(x => x.WriterName, "", new { @class = "text-danger" })
+                            <span class="focus-input100" data-symbol="&#xf206;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="Soyad Alanını Boş Geçemezsiniz">
+                            <span class="label-input100">Soyad</span>
+                            <input class="input100" type="text" name="WriterSurname" placeholder="Soyadınızı Giriniz">
+                            @Html.ValidationMessageFor(x => x.WriterSurname, "", new { @class = "text-danger" })
+                            <span class="focus-input100" data-symbol="&#xf206;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="Mail Alanını Boş Geçemezsiniz">
+                            <span class="label-input100">Mail</span>
+                            <input class="input100" type="text" name="WriterMail" placeholder="Mail Adresi Giriniz">
+                            @Html.ValidationMessageFor(x => x.WriterMail, "", new { @class = "text-danger" })
+                            @Html.ValidationMessage("AlreadyMail", "", new { @class = "text-danger" })
+
+                            <span class="focus-input100" data-symbol="&#xf2c3;"></span>  @*&#xf2d6;*@
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="Şifre Alanını Boş Geçemezsiniz">
+                            <span class="label-input100">Şifre</span>
+                            <input class="input100" type="text" name="WriterPassword" placeholder="Şifrenizi Giriniz">
+                            @Html.ValidationMessageFor(x => x.WriterPassword, "", new { @class = "text-danger" })
+                            <span class="focus-input100" data-symbol="&#xf190;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="Hakkınızda Alanını Boş Geçemezsiniz">
+                            <span class="label-input100">Hakkınızda</span>
+                            <input class="input100" type="text" name="WriterAbout" placeholder="Hakkınızda">
+                            @Html.ValidationMessageFor(x => x.WriterAbout, "", new { @class = "text-danger" })
+                            <span class="focus-input100" data-symbol="&#xf206;"></span>
+                        </div>
+                        @*<div class="col-md-3">
+            <img src="~/AdminLTE-3.0.4/dist/img/@Model.WriterImage" class="img-circle" width="128" height="128" />
+            <br /><br />
+            <input type="file" name="ProfileImage" id="ProfileImage" class="form-control" />
+            <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+            <span><i>Lütfen jpg,jpeg yada png formatı kullanınız.</i></span>
+        </div>*@
+
+                        <div class="container-login100-form-btn">
+                            <div class="wrap-login100-form-btn">
+                                <div class="login100-form-bgbtn"></div>
+                                <button class="login100-form-btn" type="submit">
+                                    Kayıt Ol
+                                </button>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="flex-col-c p-t-35">
+                            <span class="txt1 p-b-17">
+                                Zaten Bir Hesabın Var mı?
+                            </span>
+
+                            <a href="/Login/WriterLogin" class="txt2">
+                                Giriş Yap
+                            </a>
+                        </div>
+                        <br />
+                        <div class="flex-c-m">
+                            <a href="#" class="login100-social-item bg1">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="#" class="login100-social-item bg2">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="login100-social-item bg3">
+                                <i class="fa fa-google"></i>
+                            </a>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="dropDownSelect1"></div>
+    }
+    <!--===============================================================================================-->
+    <script src="~/AdminLTE-3.0.4/Login_v4/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/AdminLTE-3.0.4/Login_v4/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/AdminLTE-3.0.4/Login_v4/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/AdminLTE-3.0.4/Login_v4/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/AdminLTE-3.0.4/Login_v4/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/AdminLTE-3.0.4/Login_v4/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/Login_v4/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/AdminLTE-3.0.4/Login_v4/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/AdminLTE-3.0.4/Login_v4/js/main.js"></script>
+
+</body>
+</html>
+
+

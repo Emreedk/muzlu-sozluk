@@ -1,0 +1,103 @@
+﻿
+@using ContentProject.WebUI.Models
+@using ContentProject.Entity.Concrete
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Content>
+
+
+@{
+    ViewBag.Title = "ContentByHeading";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+<br />
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+
+
+                <!-- Timelime example  -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- The time line -->
+                        <div class="timeline">
+                            <!-- timeline time label -->
+                            @foreach (var item in Model)
+                            {
+                                <div class="time-label">
+                                    <span class="bg-success">@item.ContentDate</span>
+                                </div>
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <div>
+                                    <i class="fas fa-comment bg-yellow"></i>
+                                    <div class="timeline-item">
+                                        <h3 class="timeline-header"><a>@item.Heading.HeadingName</a> </h3>
+
+                                        <div class="timeline-body">
+                                            @item.ContentValue
+                                        </div>
+                                        @if (CurrentSession.Writer.WriterUsername == item.Writer.WriterUsername)
+                                        {
+                                            <div class="timeline-body">
+                                                <a class="btn btn-info btn-sm" href="/WriterPanelContent/MyContentEdit/@item.ContentId">
+                                                    <i class="fas fa-pencil-alt">
+                                                    </i>
+                                                    Düzenle
+                                                </a>
+                                                <a class="btn btn-danger btn-sm" href="/WriterPanelContent/MyContentDelete/@item.ContentId">
+                                                    <i class="fas fa-trash">
+                                                    </i>
+                                                    Sil
+                                                </a>
+                                            </div>
+                                        }
+
+
+                                    </div>
+                                </div>
+                                <!-- END timeline item -->
+                            }
+
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+
+
+            </div>
+            <!-- /.timeline -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- ./wrapper -->
+</body>
+</html>
+@if (Model.Count > 10)
+{
+    @Html.PagedListPager((IPagedList)Model, p => Url.Action("ContentByWriter", "Writer", new { p }), new PagedListRenderOptions
+    {
+        LiElementClasses = new List<string>
+        { "page-link"}
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+

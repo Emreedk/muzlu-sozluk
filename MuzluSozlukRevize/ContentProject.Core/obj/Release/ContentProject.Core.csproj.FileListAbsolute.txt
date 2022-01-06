@@ -1,0 +1,9 @@
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\bin\Release\ContentProject.Core.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\bin\Release\ContentProject.Core.pdb
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\bin\Release\FluentValidation.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\bin\Release\FluentValidation.xml
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\obj\Release\ContentProject.Core.csproj.AssemblyReference.cache
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\obj\Release\ContentProject.Core.csproj.CoreCompileInputs.cache
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\obj\Release\ContentProject.Core.csproj.CopyComplete
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\obj\Release\ContentProject.Core.dll
+C:\Users\emree\Desktop\emre asp.net\ContentProjectRevizasyon\ContentProject.Core\obj\Release\ContentProject.Core.pdb
